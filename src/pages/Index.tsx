@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Dashboard from "@/components/Dashboard";
@@ -146,7 +145,7 @@ const Index = () => {
           
           <main className="container py-6 max-w-7xl">
             <div className="hidden md:flex justify-between items-center mb-6">
-              <SidebarTrigger asChild>
+              <SidebarTrigger>
                 <Button variant="outline" size="sm">
                   Toggle Sidebar
                 </Button>
