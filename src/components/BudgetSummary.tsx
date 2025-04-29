@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Language, getTranslation } from "@/utils/languageUtils";
-import { BudgetCategory, ExpenseCategory } from "@/data/mockData";
+import { BudgetCategory } from "@/data/mockData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
@@ -53,8 +53,7 @@ const BudgetSummary: React.FC<BudgetSummaryProps> = ({ language, budgetData }) =
           </div>
           <Progress 
             value={percentSpent} 
-            className="h-2"
-            indicatorClassName={getProgressColor(percentSpent)}
+            className={cn("h-2", getProgressColor(percentSpent))}
           />
           <div className="text-xs text-right">
             {percentSpent.toFixed(0)}% {getTranslation("spent", language)}
@@ -82,8 +81,7 @@ const BudgetSummary: React.FC<BudgetSummaryProps> = ({ language, budgetData }) =
                 </div>
                 <Progress 
                   value={percentUsed} 
-                  className="h-1.5"
-                  indicatorClassName={getProgressColor(percentUsed)}
+                  className={cn("h-1.5", getProgressColor(percentUsed))}
                 />
               </div>
             );

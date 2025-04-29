@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Dashboard from "@/components/Dashboard";
@@ -25,7 +26,7 @@ import {
 } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import { Calendar, ChartBar, DollarSign, Plus } from "lucide-react";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
   const [language, setLanguage] = useState<Language>("en");
@@ -116,19 +117,19 @@ const Index = () => {
           </SidebarHeader>
           <SidebarContent>
             <div className="space-y-1 p-2">
-              <Button variant="sidebar" size="sm" className="w-full justify-start">
+              <Button variant="ghost" size="sm" className="w-full justify-start">
                 <DollarSign className="mr-2 h-4 w-4" />
                 Dashboard
               </Button>
-              <Button variant="sidebar" size="sm" className="w-full justify-start">
+              <Button variant="ghost" size="sm" className="w-full justify-start">
                 <Plus className="mr-2 h-4 w-4" />
                 Add Expense
               </Button>
-              <Button variant="sidebar" size="sm" className="w-full justify-start">
+              <Button variant="ghost" size="sm" className="w-full justify-start">
                 <Calendar className="mr-2 h-4 w-4" />
                 Budget Calendar
               </Button>
-              <Button variant="sidebar" size="sm" className="w-full justify-start">
+              <Button variant="ghost" size="sm" className="w-full justify-start">
                 <ChartBar className="mr-2 h-4 w-4" />
                 Reports
               </Button>
@@ -147,7 +148,7 @@ const Index = () => {
             <div className="hidden md:flex justify-between items-center mb-6">
               <SidebarTrigger asChild>
                 <Button variant="outline" size="sm">
-                  <span>Toggle Sidebar</span>
+                  Toggle Sidebar
                 </Button>
               </SidebarTrigger>
             </div>
